@@ -26,11 +26,11 @@ export default {
 
 <style lang="scss">
     nav{
-        height: 100px;
+        height: 60px;
         width: 100%;
         background-color: white;
         color: black;
-        margin-bottom: 2em;
+        margin-bottom: 42px;
 
         display: flex;
         align-items: center;

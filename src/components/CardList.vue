@@ -5,6 +5,8 @@ import AppPagination from './AppPagination.vue';
 //importo la CardItem
 import CardItem from './CardItem.vue';
 
+import AppCardType from './AppCardType.vue';
+
 import {store} from '../store.js'
 
 export default {
@@ -13,6 +15,7 @@ export default {
     components: {
         AppPagination,
         CardItem,
+        AppCardType,
     },
 
     data() {
@@ -25,6 +28,7 @@ export default {
 
 <template>
     <AppPagination></AppPagination>
+    <AppCardType></AppCardType>
     <div class="container">
 
         <ul>
@@ -39,14 +43,15 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../styles/_variables.scss' as *;
 
 ul{
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
-    gap: 30px;
+    gap: $cardListGap;
 
     background-color: white;
-    padding: 30px;
+    padding: 25px;
 }
 </style>

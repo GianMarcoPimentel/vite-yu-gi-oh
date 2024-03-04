@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import CardList from './components/CardList.vue';
 
+
+
 import { store } from './store.js'
 
 export default {
@@ -30,18 +32,22 @@ export default {
 
     components: {
       CardList,
+      
     },
 
 }
 </script>
 
 <template>
- 
+
     <CardList ></CardList>
   
  
 </template>
 
 <style lang="scss">
-  
+@use './styles/_variables.scss' as *;
+#app{
+  background-color: $backgrond-app;
+}
 </style>
