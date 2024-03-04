@@ -11,6 +11,7 @@ export default {
 
 <template>
     <li>
+        <img :src="card.card_images" :alt="card.name">
         {{ card.name }}
     </li>
 </template>
