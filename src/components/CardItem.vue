@@ -1,4 +1,5 @@
 <script>
+import {store} from '../store.js'
 export default {
     name:'CardItem',
 
@@ -6,11 +7,19 @@ export default {
     props: {
         card: Object,
     },
+
+    data(){
+        return{
+            store,
+        }
+    },
 } 
 </script>
 
 <template>
-    <li class="card">
+    <li class="card"
+    v-if="store.cards.length < 21 ? 'Loading...' : '' "
+    >
         <img :src="card.card_images[0].image_url" :alt="card.name">
         <h3>{{ card.name }} </h3><br>
         <h4>{{ card.type }}</h4>

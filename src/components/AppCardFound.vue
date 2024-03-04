@@ -5,6 +5,8 @@ export default{
 
     data(){
         return {
+            cards:[],
+            
             store,
         }
     }
@@ -13,8 +15,10 @@ export default{
 
 <template>
     <div class="container">
-        <div class="card-found">
-            //scrivere il numero di carte trovate
+        <div class="card-found"
+         
+        >
+            <!-- scrivere il numero di carte trovate -->
              Found {{ store.cards.length }} cards.
         </div>
     </div>

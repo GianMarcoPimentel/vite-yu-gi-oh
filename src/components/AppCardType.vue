@@ -7,7 +7,7 @@ export default{
 <template>
     <div class="container">
         <div class="card-type">
-            <small>Alien</small>
+            <small>Spell Card</small>
             <small><i class="fa-solid fa-chevron-down"></i></small>
         </div>
     </div>
