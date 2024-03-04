@@ -2,23 +2,23 @@
 // importo l'AppPagination
 import AppPagination from './AppPagination.vue';
 
+import {store} from '../store.js'
+
 export default {
     name: 'CardList',
 
-
-    components: {
-        AppPagination,
-    },
-    props: {
-        cards: Array,
-    },
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
 <template>
     <AppPagination></AppPagination>
      <ul>
-    <li v-for="currentCard in cards">
+    <li v-for="currentCard in store.cards">
       {{ currentCard.name  }}
     </li>
   </ul>
