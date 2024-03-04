@@ -39,11 +39,14 @@ export default {
 </template>
 
 <style lang="scss">
-.container{
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+
 ul{
     list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+
+    background-color: white;
+    padding: 30px;
 }
 </style>
