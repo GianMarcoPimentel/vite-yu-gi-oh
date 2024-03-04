@@ -5,10 +5,16 @@ import axios from 'axios';
 
 import CardList from './components/CardList.vue';
 
+import { store } from './store.js'
+
 export default {
     data() {
       return {
         cards: [],
+
+        // dichiaro lo store
+        store,
+
       }
     },
 
