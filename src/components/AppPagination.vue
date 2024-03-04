@@ -3,6 +3,7 @@ import {store} from '../store.js'
 export default {
     name: 'AppPagination',
 
+    
     data(){
         return {
             store,
@@ -12,9 +13,31 @@ export default {
 </script>
 
 <template>
+    
+        <nav>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNTti9YDW4-vfjHNSo1oelG_tAQ0O6WhS_f5gbF9zWFg&s" alt="">
+            <h1>
+                Yu-Gi-Ho! API
+            </h1>
+        </nav>
+   
 
 </template>
 
-<style>
+<style lang="scss">
+    nav{
+        height: 100px;
+        width: 100%;
+        background-color: white;
+        color: black;
+        margin-bottom: 2em;
 
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img{
+            height: 100%;
+        }
+    }
 </style>
