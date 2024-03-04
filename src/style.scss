@@ -12,13 +12,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+//reset
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+//container in comune
 .container{
   max-width: 1000px;
   margin: 0 auto;

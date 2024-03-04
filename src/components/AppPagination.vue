@@ -1,4 +1,6 @@
 <script>
+// importo lo store e lo dichiaro nei data per capire 
+//che ha a che fare con questa section
 import {store} from '../store.js'
 export default {
     name: 'AppPagination',

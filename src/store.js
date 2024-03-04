@@ -1,3 +1,6 @@
+// store = è la  fonte della verità  
+//che tutte le section deve avere in comune
+
 import { reactive } from 'vue'
 
 export const store = reactive ({

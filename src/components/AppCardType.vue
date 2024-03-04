@@ -2,7 +2,7 @@
 export default{
     name:'AppCardType',
 }
-</script>
+</script> 
 
 <template>
     <div class="container">

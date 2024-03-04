@@ -1,7 +1,7 @@
 <script>
 import {store} from '../store.js';
 export default{
-    name:'AppcardFound',
+    name:'AppCardFound',
 
     data(){
         return {
@@ -13,9 +13,8 @@ export default{
 
 <template>
     <div class="container">
-
-
         <div class="card-found">
+            //scrivere il numero di carte trovate
              Found {{ store.cards.length }} cards.
         </div>
     </div>
@@ -26,4 +25,4 @@ export default{
         background-color: #212529;
         padding: 15px 10px;
     }
-</style>
+</style> 
