@@ -3,6 +3,8 @@
 
 import axios from 'axios';
 
+import CardList from './components/CardList.vue';
+
 export default {
     data() {
       return {
@@ -10,27 +12,30 @@ export default {
       }
     },
 
-    components: {
-
-    },
-
     created() {
       axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10').then(res => {
         console.log(res.data.data);
         this.cards = res.data.data
       })
-    }
+    },
+
+
+    components: {
+      CardList,
+    },
+
 }
 </script>
 
 <template>
-  <ul>
+ <CardList :cards="cards"></CardList>
+ <!--  <ul>
     <li v-for="currentCard in cards">
       {{ currentCard.name  }}
     </li>
-  </ul>
+  </ul> -->
 </template>
 
-<style>
+<style lang="scss">
 
 </style>
