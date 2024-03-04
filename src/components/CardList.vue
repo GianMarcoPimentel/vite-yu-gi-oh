@@ -7,6 +7,9 @@ import CardItem from './CardItem.vue';
 
 import AppCardType from './AppCardType.vue';
 
+import AppCardFound from './AppCardFound.vue';
+
+
 import {store} from '../store.js'
 
 export default {
@@ -16,6 +19,7 @@ export default {
         AppPagination,
         CardItem,
         AppCardType,
+        AppCardFound,
     },
 
     data() {
@@ -29,6 +33,7 @@ export default {
 <template>
     <AppPagination></AppPagination>
     <AppCardType></AppCardType>
+    <AppCardFound></AppCardFound>
     <div class="container">
 
         <ul>
