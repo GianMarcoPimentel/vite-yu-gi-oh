@@ -15,11 +15,12 @@ export default{
 <template>
     <div class="container">
         <div class="card-type">
-            <select name="archetype" id="archetype"
+            <select name="archetype" id="archetype" placeholder="-Seleziona Archetype-"
             v-model="store.searchArchetype"
             @change="$emit('search')" 
             >
-                <option :value="currentArchetypeName.archetype_name"
+<!--                 <option name="Seleziona archetype" value="Seleziona archetype">Seleziona archetype</option>
+ -->                <option :value="currentArchetypeName.archetype_name"
                 v-for="currentArchetypeName in store.archetype"
                 >
                 {{ currentArchetypeName.archetype_name }}

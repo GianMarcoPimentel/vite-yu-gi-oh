@@ -46,4 +46,14 @@ export default {
         color: black;
     }
 }
+@media screen and (max-width: 768px){
+    .card{
+        width: calc(100% / 3 - ($cardListGap / 3 * 2));
+    }
+}
+@media screen and (max-width: 498px){
+    .card{
+        width: 100%;
+    }
+}
 </style>
