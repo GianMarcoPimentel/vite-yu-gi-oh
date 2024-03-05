@@ -1,13 +1,19 @@
 <script>
 export default{
     name:'AppCardType',
+
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script> 
 
 <template>
     <div class="container">
         <div class="card-type">
-            <small>Spell Card</small>
+            <small> Normal </small>
             <small><i class="fa-solid fa-chevron-down"></i></small>
         </div>
     </div>
@@ -18,6 +24,7 @@ export default{
     
     width: 100px;
     padding: 10px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;

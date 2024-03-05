@@ -22,7 +22,7 @@ export default {
     >
         <img :src="card.card_images[0].image_url" :alt="card.name">
         <h3>{{ card.name }} </h3><br>
-        <h4>{{ card.type }}</h4>
+        <h4>{{ card.race }}</h4>
     </li>
 </template>
 

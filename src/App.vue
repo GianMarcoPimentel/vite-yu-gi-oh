@@ -5,6 +5,14 @@ import axios from 'axios';
 
 import CardList from './components/CardList.vue';
 
+// importo l'AppPagination
+import AppPagination from './components/AppPagination.vue';
+
+//importo la scelta del tipo di carta
+import AppCardType from './components/AppCardType.vue';
+
+
+
  
 
 import { store } from './store.js'
@@ -32,14 +40,16 @@ export default {
 
     components: {
       CardList,
-      
+      AppPagination,
+      AppCardType,
     },
 
 }
 </script>
 
 <template>
-
+    <AppPagination></AppPagination>
+    <AppCardType></AppCardType>
     <CardList ></CardList>
   
  
