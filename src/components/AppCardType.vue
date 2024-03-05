@@ -6,6 +6,7 @@ export default{
     data() {
         return {
             store,
+           
         }
     },
 }
@@ -14,11 +15,23 @@ export default{
 <template>
     <div class="container">
         <div class="card-type">
-
-            <input type="search"
+            <select name="archetype" id="archetype"
+            v-model="store.searchArchetype"
+            @change="$emit('search')" 
+            >
+                <option :value="currentArchetypeName.archetype_name"
+                v-for="currentArchetypeName in store.archetype"
+                >
+                {{ currentArchetypeName.archetype_name }}
+                </option>
+            </select>
+            <!-- <input type="search"    
             v-model="store.searchCard"
             >
-            <button @click="$emit('search')" class="btn"><i class="fa-solid fa-chevron-down"></i></button>
+            <button 
+            @click="$emit('search')" 
+            class="btn"
+            ><i class="fa-solid fa-chevron-down"></i></button> -->
 
 <!--             <small> Normal </small>
  --><!--             <small><i class="fa-solid fa-chevron-down"></i></small>

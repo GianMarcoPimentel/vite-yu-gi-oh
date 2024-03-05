@@ -9,5 +9,7 @@ export const store = reactive ({
     cards : [],
 
     // inserisco una variabile(stringa vuota per ceracre le carte)
-    searchCard: "",
+    searchArchetype: "",
+
+    archetype : [],
 })

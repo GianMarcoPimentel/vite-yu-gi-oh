@@ -9,17 +9,17 @@ export default{
             
             store,
         }
-    }
+    } 
 }
 </script>
 
 <template>
     <div class="container">
         <div class="card-found"
-         
         >
             <!-- scrivere il numero di carte trovate -->
              Found {{ store.cards.length }} cards.
+             
         </div>
     </div>
 </template>

@@ -12,9 +12,6 @@ import AppPagination from './components/AppPagination.vue';
 import AppCardType from './components/AppCardType.vue';
 
 
-
- 
-
 import { store } from './store.js'
 
 export default {
@@ -22,6 +19,7 @@ export default {
       return {
         cards: [],
 
+        archetype:[],
         // dichiaro lo store
         store,
 
@@ -30,11 +28,21 @@ export default {
 
     created() {
       axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10').then(res => {
-        console.log(res.data.data);
+        console.dir(res.data.data);
         this.store.cards = res.data.data
       }).catch(err => {
         console.log(err);
       })
+
+      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php').then(res => {
+         console.dir(res.data)
+         this.store.archetype = res.data;
+        /*  console.log(store.cards.length) */
+         console.dir(this.store.archetype)
+      }).catch(err => {
+        console.log(err);
+      })
+      
     },
 
 
@@ -45,12 +53,14 @@ export default {
     },
 
     methods: {
-      searchCard() {
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10&archetype=' + this.store.searchCard).then(res => {
+      searchArchetype() {
+        console.log("modificato arcotipo:"+ this.store.searchArchetype)
+        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10&archetype=' + this.store.searchArchetype).then(res => {
           /* console.log(res.data.data) */
+          console.dir(res)
           this.store.cards = res.data.data
-         /*  console.log(this.store.cards) */
-
+          console.log(this.store.cards)
+          
 
         })
       }
@@ -61,10 +71,10 @@ export default {
 
 <template>
     <AppPagination></AppPagination>
-    <AppCardType @search="searchCard()"></AppCardType>
+    <AppCardType @search="searchArchetype()"></AppCardType>
     <CardList ></CardList>
   
- 
+  
 </template>
 
 <style lang="scss">
