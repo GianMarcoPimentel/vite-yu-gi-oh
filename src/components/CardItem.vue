@@ -46,12 +46,18 @@ export default {
         color: black;
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
+    .container{
+        max-width: 600px;
+    }
     .card{
         width: calc(100% / 3 - ($cardListGap / 3 * 2));
     }
 }
-@media screen and (max-width: 498px){
+@media screen and (max-width: 576px){
+    .container{
+        max-width: 400px;
+    }
     .card{
         width: 100%;
     }
