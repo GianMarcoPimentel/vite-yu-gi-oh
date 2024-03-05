@@ -1,4 +1,5 @@
 <script>
+import {store} from '../store.js';
 export default{
     name:'AppCardType',
 
@@ -13,26 +14,22 @@ export default{
 <template>
     <div class="container">
         <div class="card-type">
-            <small> Normal </small>
-            <small><i class="fa-solid fa-chevron-down"></i></small>
-        </div>
+
+            <input type="search" >
+            <button @click="$emit('search')" class="btn"><i class="fa-solid fa-chevron-down"></i></button>
+
+<!--             <small> Normal </small>
+ --><!--             <small><i class="fa-solid fa-chevron-down"></i></small>
+ -->        </div>
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.container{
+    padding: 24px 0px;
+}
 .card-type{
-    
-    width: 100px;
-    padding: 10px;
-    
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    background-color: white;
-    color: black;
-    margin-bottom: 42px;
-
-    border-radius: 8px;
 }
 </style>

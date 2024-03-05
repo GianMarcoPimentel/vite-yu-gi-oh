@@ -49,7 +49,7 @@ export default {
 
 <template>
     <AppPagination></AppPagination>
-    <AppCardType></AppCardType>
+    <AppCardType @search="searchCard()"></AppCardType>
     <CardList ></CardList>
   
  
