@@ -44,6 +44,18 @@ export default {
       AppCardType,
     },
 
+    methods: {
+      searchCard() {
+        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=10&archetype=Alien').then(res => {
+          /* console.log(res.data.data) */
+          this.store.cards = res.data.data
+          console.log(this.store.cards)
+
+
+        })
+      }
+    },
+
 }
 </script>
 
