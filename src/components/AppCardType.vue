@@ -15,7 +15,9 @@ export default{
     <div class="container">
         <div class="card-type">
 
-            <input type="search" >
+            <input type="search"
+            v-model="store.searchCard"
+            >
             <button @click="$emit('search')" class="btn"><i class="fa-solid fa-chevron-down"></i></button>
 
 <!--             <small> Normal </small>
